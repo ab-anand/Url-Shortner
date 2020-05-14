@@ -14,13 +14,14 @@ maintaining all the useful information it contains such as `query params`.
 * flask
 * Linux Mint
 
----
 
 ## Project Structure
 
     Url-Shortner
-    ├── ...
-    ├── templates                   
+    ├── bin
+    │	├── setup
+    │   └── setup.sh 	   # setting up the project
+    ├── templates          # all the html templates         
     │   ├── index.html          
     │   ├── base.html         
     │   ├── stats.html 
@@ -33,3 +34,8 @@ maintaining all the useful information it contains such as `query params`.
     ├──  schema.sql           # schema for the DB
     ├──  urls.db              # the DB
     └──  test.py 	          # some tests on the DB
+
+
+## Setup
+
+Visit the [Setup file](setup.md)
