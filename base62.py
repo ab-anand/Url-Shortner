@@ -3,7 +3,7 @@ import string
 
 
 def toBase62(num, base = 62):
-    '''input: any base 10 integer
+    '''input: any base10 integer
     returns: base62 string of the input
     '''
     if base <= 0 or base > 62:
@@ -25,7 +25,7 @@ def toBase62(num, base = 62):
 
 def toBase10(num, b = 62):
     '''input: base62 string
-    returns:  base 10 value of the input
+    returns:  base10 integer value of the input
     '''
     base = string.digits + string.ascii_lowercase + string.ascii_uppercase
 
@@ -34,7 +34,7 @@ def toBase10(num, b = 62):
 
     for i in range(limit):
         res = b * res + base.find(num[i])
-        
+
     return res
 
 # print(toBase62(1000000))

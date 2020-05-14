@@ -1,3 +1,5 @@
+<!-- This page shows the top 5 visited urls -->
+
 {% extends "base.html" %}
 
 	{% block content %}
@@ -19,9 +21,10 @@
 					    </tr>
 					  </thead>
 					  <tbody>
+					  	<!-- get the elements which is an array of tuples(kind of array) 
+					  		sent from the server and iterate over it -->
 					  	{% for element in elements %}
 					  		<tr>
-					  			<!-- <th scope="row">{{ element[0] }}</th> -->
 					  			{% for data in element %}
 					  				<td>{{ data }}</td>
 					  			{% endfor %}
