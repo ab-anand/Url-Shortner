@@ -15,7 +15,6 @@ def connect_db():
 	a connection with the database 
 	mentioned in cofig.py file
 	'''
-
 	return sqlite3.connect(config.DATABASE_NAME)
 
 
@@ -80,8 +79,8 @@ def shortened(url_short):
 	using the shorten link provided.
 	Return 404 if the link isn't in the DB
 	'''
-	
-	if str(url_short) != 'favicon.ico':
+
+	try:
 		decoded_url = toBase10(url_short)
 		cursor = g.db.execute('''
 					UPDATE urls SET visited = visited + 1 
@@ -90,12 +89,21 @@ def shortened(url_short):
 					SELECT original_url FROM urls 
 					WHERE id=?''', (decoded_url,))
 		g.db.commit()
+
 		try:
 			redirect_to_url = cursor.fetchone()[0]
 		except TypeError as e:
 			return abort(404)
 		
 		return redirect(redirect_to_url)
+
+	# when the page is loaded the there is a request for 
+	# "http://localhost:8000/favicon.ico" which causes the 
+	# sqlite integer overflow because it converts "favicon.ico"
+	# to base10 which become larger than the sqlite MAX Integer range.
+	
+	except OverflowError as e:
+		print(str(e))
 
 
 @app.route('/stats')
@@ -120,8 +128,9 @@ def not_found(error):
 	'''
 	return render_template('404.html'), 404
 
-
+# run the app
 if __name__ == "__main__":
+
 	app.debug = True
 	host = '0.0.0.0'
 	port = 8000
