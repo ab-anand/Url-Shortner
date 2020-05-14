@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+   
+   {% block content %}
+         
+         <div class="jumbotron">
+            <div class="container">
+               <br />
+
+               {% if not result_url %}
+               <div class="row">
+                  <div class="col-md-offset-3 col-md-5">
+                     <h4 style="color:green">Get a condensed URL for your services</h4>
+                     <form method="post" class="navbar-form navbar-right">
+                        <div class="form-group">
+                           <label for="url">Enter URL</label>
+                           <input type="text" id="url" name="url" class="form-control input-lg chat-input" placeholder="url" style="border:2px solid black"/>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                     </form>
+                  </div>
+               </div>
+
+               {% else %}
+               <div>
+                  Your original URL is: <a href="{{ original_url }}" target="_blank"> {{ original_url }}</a>
+                  <br>
+                  Your shortened URL is: <a href="{{ result_url }}" target="_blank">  {{ result_url }}</a>
+               </div>
+               {% endif %}
+               <br>
+                  <a href="{{ url_for('get_stats') }}" target="_blank"> Get Stats</a>
+            </div>
+         </div>
+
+   {% endblock%}
