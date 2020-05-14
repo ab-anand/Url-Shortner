@@ -3,8 +3,7 @@
 
 ---
 
-This project is aimed to create a URL Shorter which would take the long urls and convert it to condensed form 
-maintaining all the useful information it contains such as `query params`.
+This project is aimed to create a URL Shortener which would take lengthy URLs and convert them into condensed form. This is done by maintaining all the useful information of the URL such as query params as well as putting no restrictions on URL length. 
 
 ---
 
@@ -82,3 +81,7 @@ the tables and thus going with NoSql DB would have worked too.
 	Options for each character = 62
 	Total unique string possible => 62^8 = ~ 2.1834011e+14
 ```
+
+## Making it better
+
+Visit the [Todo file](TODO.md)
