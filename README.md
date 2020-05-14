@@ -3,6 +3,10 @@
 
 ---
 
+```
+ https://www.youtube.com/results?search_query=automated+deployment+python =>  http://127.0.0.1:8000/4
+```
+
 This project is aimed to create a URL Shortener which would take lengthy URLs and convert them into condensed form. This is done by maintaining all the useful information of the URL such as query params as well as putting no restrictions on URL length. 
 
 ---
