@@ -16,7 +16,7 @@ maintaining all the useful information it contains such as `query params`.
 
 
 ## Project Structure
-
+```
     Url-Shortner/
     ├── bin
     │	├── setup
@@ -35,7 +35,7 @@ maintaining all the useful information it contains such as `query params`.
     ├──  schema.sql           # schema for the DB
     ├──  urls.db              # the DB
     └──  test.py 	          # some tests on the DB
-
+```
 
 ## Setup
 
