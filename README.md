@@ -30,6 +30,7 @@ This project is aimed to create a URL Shortener which would take lengthy URLs an
     ├──  config.py            # database configuration
     ├──  README.md
     ├──  SETUP.md
+    ├──  TODO.md
     ├──  requirements.txt
     ├──  schema.sql           # schema for the DB
     ├──  urls.db              # the DB
