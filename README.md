@@ -47,10 +47,11 @@ Visit the [Setup file](SETUP.md)
 * The Database selected is SQLite, although there is no relationship to maintain among
 the tables and thus going with NoSql DB would have worked too.
 * The schema has been kept minimal to avoid space usage. Shown below
-	
+```	
 	database/
-    └── url(table)
-    	├── id
-    	├── original_url
-    	└── visited
+	└── url(table)
+		├── id
+		├── original_url
+		└── visited
 
+```
