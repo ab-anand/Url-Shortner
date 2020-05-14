@@ -38,4 +38,4 @@ maintaining all the useful information it contains such as `query params`.
 
 ## Setup
 
-Visit the [Setup file](setup.md)
+Visit the [Setup file](SETUP.md)
